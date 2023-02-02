@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      // setModalShow(false)
+      setModalShow(false)
     }, 4000)
   }, [])
 
