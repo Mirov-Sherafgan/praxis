@@ -4,6 +4,7 @@ import {useWindowSize} from "./hooks/resize.js";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import {useEffect, useState} from "react";
 import Main from "./components/Main/Main.jsx";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 
 function App() {
@@ -20,9 +21,9 @@ function App() {
     <img src={logo} className="rounded-full w-64 h-64 animate-bounce" alt="logo"/>
   </div>
 
-  if (width > 655) {
-    return <div>Извините, приложение доступна только на телефоне</div>
-  }
+  // if (width > 655) {
+  //   return <div>Извините, приложение доступна только на телефоне</div>
+  // }
 
 
 
