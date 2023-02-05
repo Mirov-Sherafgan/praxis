@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import {BrowserRouter, createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Interns from "./components/Interns/Interns.jsx";
 
 
 const router = createBrowserRouter([
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "interns",
-    element: <div>Эта страница скоро заработает</div>,
+    element: <Interns/>,
   },
 ]);
 
