@@ -2,7 +2,7 @@ import logo from '../public/logo-1.png';
 import './App.css'
 import {useWindowSize} from "./hooks/resize.js";
 import Navbar from "./components/Navbar/Navbar.jsx";
-import {useEffect, useLayoutEffect, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 import Main from "./components/Main/Main.jsx";
 import AOS from 'aos';
 import {AnimatePresence, motion} from "framer-motion";
@@ -13,7 +13,7 @@ function App() {
   const [modalShow, setModalShow] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setModalShow(false)
       AOS.init({
         offset: 30,
@@ -22,9 +22,11 @@ function App() {
         once: true,
       })
     }, 2500)
+
+    return () => clearTimeout(timeout)
   }, [])
 
-  const WelcomePopup = () => {
+  const WelcomePopup = useCallback(() => {
     return modalShow &&
         <motion.div
             key="modal"
@@ -41,21 +43,19 @@ function App() {
               alt="logo"
           />
         </motion.div>
-  }
+  }, [])
 
 
   if (width > 655) {
     return <div>
-      <div data-aos="fade-up">
-        Извините, приложение доступна только на телефоне
-      </div>
+      Извините, приложение доступна только на телефоне
     </div>
   }
 
 
   return <>
     <AnimatePresence>
-      {modalShow && <WelcomePopup/>}
+      {modalShow && WelcomePopup()}
     </AnimatePresence>
     <div className="App">
       <Navbar/>

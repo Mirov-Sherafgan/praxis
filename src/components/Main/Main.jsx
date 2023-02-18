@@ -85,7 +85,7 @@ const posts = [
 const Main = () => {
   return (
       <div className="mt-2 grid place-items-center justify-center text-center">
-        <p data-aos="fade-up">Это наш <span className="font-bold italic">"ДОРОГОЙ ДНЕВНИК..."</span> где мы будем выкладывать все, что проходили на практике. <span
+        <p data-aos="fade-up">Это наш <span className="font-bold italic">"ДОРОГОЙ ДНЕВНИК"</span> где мы будем выкладывать все, что проходили на практике. <span
             className="text-3xl">🧑🏻‍🏫</span></p>
         <p data-aos="fade-up">Будет интересно, погнали <span className="text-4xl">🫶🏻</span></p>
         <section>
