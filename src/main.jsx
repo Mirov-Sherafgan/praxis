@@ -4,9 +4,9 @@ import App from './App'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Interns from "./components/Interns/Interns.jsx";
 
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'aos/dist/aos.css';
 import './index.css'
-import Navbar from "./components/Navbar/Navbar.jsx";
 
 
 const router = createBrowserRouter([
