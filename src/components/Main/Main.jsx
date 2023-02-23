@@ -149,7 +149,7 @@ const Main = () => {
           className="text-3xl">🧑🏻‍🏫</span></p>
     <p data-aos="fade-up">Будет интересно, погнали <span className="text-4xl">🫶🏻</span></p>
     <section>
-      {posts.map(el => <Post post={el}/>)}
+      {posts.map(el => <Post key={el.id} post={el}/>)}
     </section>
   </div>);
 };

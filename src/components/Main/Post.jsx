@@ -26,13 +26,15 @@ const Post = ({post}) => {
             className="object-cover rounded-2xl p-2 brightness-125"
             alt="расписание"
         />}
-        <p data-aos="fade-up"
+        <div data-aos="fade-up"
            data-aos-anchor-placement="top-bottom">
           {post.desc}
           {post?.image2 && <img src={post?.image2} alt="Картинка"/>}
           {post?.blockquote2}
-        </p>
-        {post.schedule}
+        </div>
+        <div>
+          {post.schedule}
+        </div>
 
         <div className="text-start">{post?.footer}</div>
 
