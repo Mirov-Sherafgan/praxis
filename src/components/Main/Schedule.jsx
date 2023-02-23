@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export const Schedule = ({title = "Расписание", data = []}) => {
   return (
       <div>
