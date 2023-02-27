@@ -200,7 +200,7 @@ const Main = () => {
         <p data-aos="fade-up">Будет интересно, погнали <span className="text-4xl">🫶🏻</span></p>
         <section>
           {posts.map(el => <Post key={el.id} post={el}/>)}
-          <Confetti width={width} height={height}/>
+          <Confetti width={width - 50} height={height}/>
         </section>
       </div>
   );
